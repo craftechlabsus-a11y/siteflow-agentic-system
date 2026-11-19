@@ -1,0 +1,201 @@
+{
+    "module_id": "centros_datos",
+    "name": "Centros de Datos e Infraestructura TI",
+    "name_short": "Data Center",
+    "icon": "🖥️",
+    "description": "Centros de datos Tier I–IV, salas blancas, colocación y hyperscale. Estimación por MW de potencia TI y m² de sala técnica. KPI estrella: PUE.",
+    "color_primary": "#7c3aed",
+    "color_secondary": "#4c1d95",
+    "unit_main": "MW",
+    "unit_secondary": "m² sala blanca",
+    "cost_range_min": 8000000,
+    "cost_range_max": 12000000,
+    "cost_ratios": {
+        "estructura_e_implantacion": 0.22,
+        "sistemas_electricos_ups_generadores": 0.42,
+        "hvac_refrigeracion": 0.18,
+        "seguridad_fisica_cctv": 0.04,
+        "cableado_estructurado": 0.05,
+        "sistemas_bms_dcim": 0.03,
+        "contra_incendios_fm200": 0.03,
+        "varios_imprevistos": 0.03
+    },
+    "kpi_names": [
+        "PUE",
+        "CPI",
+        "SPI",
+        "Tier Level",
+        "Disponibilidad %",
+        "EAC"
+    ],
+    "kpi_descriptions": {
+        "PUE": "Power Usage Effectiveness (objetivo ≤ 1.4 en instalaciones nuevas)",
+        "CPI": "Índice de Desempeño de Coste",
+        "SPI": "Índice de Desempeño de Plazo",
+        "Tier Level": "Nivel de redundancia Uptime Institute (I–IV)",
+        "Disponibilidad %": "SLA objetivo de disponibilidad (Tier IV = 99.9999%)"
+    },
+    "kpi_units": {
+        "PUE": "ratio",
+        "CPI": "ratio",
+        "SPI": "ratio",
+        "Tier Level": "nivel",
+        "Disponibilidad %": "%",
+        "EAC": "€"
+    },
+    "alert_thresholds": {
+        "cpi_critico": 0.75,
+        "cpi_alto": 0.88,
+        "spi_critico": 0.78,
+        "spi_alto": 0.88,
+        "tcpi_alto": 1.12,
+        "desviacion_critica": 10.0,
+        "desviacion_alta": 5.0,
+        "avance_bajo": 10.0,
+        "pue_alerta": 1.6,
+        "pue_critico": 2.0,
+        "dias_alerta_plazo": 14
+    },
+    "rag_keywords": [
+        "data center",
+        "centro de datos",
+        "sala blanca",
+        "sala tecnica",
+        "PDU",
+        "UPS",
+        "grupo electrogeno",
+        "SAI",
+        "CRAC",
+        "CRAH",
+        "in-row cooling",
+        "free cooling",
+        "aisle containment",
+        "hot aisle",
+        "cold aisle",
+        "Tier III",
+        "Tier IV",
+        "PUE",
+        "MW IT",
+        "rack",
+        "colocacion",
+        "hyperscale",
+        "TIA-942",
+        "EN 50600",
+        "DCIM",
+        "BMS",
+        "FM200",
+        "Novec"
+    ],
+    "intent_keywords": {
+        "electricidad": [
+            "UPS",
+            "generador",
+            "bypass",
+            "STS",
+            "PDU",
+            "grupo electrogeno",
+            "conmutacion",
+            "ATS"
+        ],
+        "refrigeracion": [
+            "CRAC",
+            "CRAH",
+            "in-row",
+            "free-cooling",
+            "chiller",
+            "torre refrigeracion",
+            "PUE",
+            "ASHRAE"
+        ],
+        "seguridad": [
+            "CCTV",
+            "control acceso",
+            "biometria",
+            "FM200",
+            "Novec",
+            "supresion incendios"
+        ],
+        "infraestructura": [
+            "rack",
+            "cableado estructurado",
+            "fibra optica",
+            "patch panel",
+            "DCIM",
+            "BMS",
+            "monitorizacion"
+        ]
+    },
+    "system_prompt_extension": "Eres especialista en centros de datos e infraestructura TI. Dominas los estándares TIA-942, EN 50600 y ASHRAE TC 9.9. Comprendes los niveles Tier del Uptime Institute (I al IV) y sus implicaciones en redundancia (N, N+1, 2N) y disponibilidad. El PUE (Power Usage Effectiveness) es el KPI estrella del sector: objetivo ≤ 1.4 para instalaciones nuevas, ≤ 1.5 para existentes. Conoces los sistemas de alimentación ininterrumpida (UPS), grupos generadores, PDUs, refrigeración in-row, free-cooling y contención de pasillos. El capex eléctrico representa el 40-45% del presupuesto total. Cuando analices costes, diferencia entre Tier III (~8-10 M€/MW) y Tier IV (~10-12 M€/MW, 25-40% más caro por la redundancia 2N). Los proyectos hyperscale usan métricas de coste por rack o por m² de sala blanca.",
+    "normativas": [
+        "TIA-942",
+        "EN 50600",
+        "ASHRAE TC 9.9",
+        "IEC 62040",
+        "NFPA 75",
+        "IEC 80000-13",
+        "REBT ITC-BT-28"
+    ],
+    "certificaciones": [
+        "Uptime Institute Tier I-IV",
+        "ISO/IEC 22237",
+        "EU Code of Conduct",
+        "LEED Data Center"
+    ],
+    "budget_chapters": [
+        {
+            "codigo": "01",
+            "nombre": "Obra civil y estructura",
+            "ratio": 0.10
+        },
+        {
+            "codigo": "02",
+            "nombre": "Implantación y acondicionamiento",
+            "ratio": 0.12
+        },
+        {
+            "codigo": "03",
+            "nombre": "Sistemas eléctricos (MV/LV, UPS, generadores)",
+            "ratio": 0.42
+        },
+        {
+            "codigo": "04",
+            "nombre": "HVAC y refrigeración",
+            "ratio": 0.18
+        },
+        {
+            "codigo": "05",
+            "nombre": "Seguridad física y CCTV",
+            "ratio": 0.04
+        },
+        {
+            "codigo": "06",
+            "nombre": "Cableado estructurado y fibra",
+            "ratio": 0.05
+        },
+        {
+            "codigo": "07",
+            "nombre": "BMS y DCIM",
+            "ratio": 0.03
+        },
+        {
+            "codigo": "08",
+            "nombre": "Supresión de incendios (FM200/Novec)",
+            "ratio": 0.03
+        },
+        {
+            "codigo": "09",
+            "nombre": "Imprevistos",
+            "ratio": 0.03
+        }
+    ],
+    "evm_phases": [
+        "Obra civil y aislamiento sala",
+        "Distribución eléctrica MT/BT",
+        "UPS y grupos generadores",
+        "Refrigeración y HVAC",
+        "Cableado estructurado",
+        "Seguridad y BMS/DCIM",
+        "Comisionado y pruebas Tier",
+        "Puesta en servicio"
+    ]
+}

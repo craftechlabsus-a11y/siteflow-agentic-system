@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "siteflow-agentic-gateway": {
+      "command": ".venv/bin/python",
+      "args": [
+        "-m",
+        "src.mcp_gateway.server",
+        "--transport",
+        "stdio"
+      ],
+      "env": {
+        "PYTHONPATH": "."
+      }
+    }
+  }
+}

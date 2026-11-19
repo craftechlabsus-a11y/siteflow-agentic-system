@@ -1,0 +1,178 @@
+{
+    "module_id": "canales_tuberias",
+    "name": "Canales, Captaciones y Tuberías de Agua",
+    "name_short": "Canales/Red",
+    "icon": "🌊",
+    "description": "Obras hidráulicas lineales: captaciones fluviales y de embalse, canales a lámina libre, conducciones a presión (FD, PEAD, PRFV, acero), estaciones de bombeo y arquetas de control.",
+    "color_primary": "#0284c7",
+    "color_secondary": "#0c4a6e",
+    "unit_main": "ml",
+    "unit_secondary": "l/s",
+    "cost_range_min": 250,
+    "cost_range_max": 2800,
+    "cost_ratios": {
+        "trabajos_previos_y_servicios": 0.06,
+        "movimiento_tierras_y_entibacion": 0.20,
+        "cama_apoyo_y_rellenos": 0.08,
+        "obra_civil_captacion_y_arquetas": 0.16,
+        "tuberia_y_revestimiento_canal": 0.28,
+        "valvuleria_y_piezas_especiales": 0.09,
+        "estaciones_bombeo_antiariete": 0.06,
+        "telecontrol_scada_y_electrico": 0.03,
+        "pruebas_hidraulicas_y_desinfeccion": 0.02,
+        "seguridad_salud_y_calidad": 0.02
+    },
+    "kpi_names": [
+        "CPI",
+        "SPI",
+        "Rendimiento Lineal",
+        "Pruebas Presión OK",
+        "Índice Seguridad",
+        "EAC"
+    ],
+    "kpi_descriptions": {
+        "CPI": "Índice de Desempeño de Coste",
+        "SPI": "Índice de Desempeño de Plazo",
+        "Rendimiento Lineal": "Metros lineales de conducción/canal ejecutados por día (ml/día)",
+        "Pruebas Presión OK": "Porcentaje de tramos con prueba de presión/estanqueidad superada",
+        "Índice Seguridad": "Accidentes con baja / millón horas trabajadas (zanjas y taludes)",
+        "EAC": "Estimación a la Conclusión del proyecto (€)"
+    },
+    "kpi_units": {
+        "CPI": "ratio",
+        "SPI": "ratio",
+        "Rendimiento Lineal": "ml/día",
+        "Pruebas Presión OK": "%",
+        "Índice Seguridad": "accidentes/Mh",
+        "EAC": "€"
+    },
+    "alert_thresholds": {
+        "cpi_critico": 0.84,
+        "cpi_alto": 0.92,
+        "spi_critico": 0.80,
+        "spi_alto": 0.88,
+        "tcpi_alto": 1.08,
+        "desviacion_critica": 16.0,
+        "desviacion_alta": 8.0,
+        "avance_bajo": 15.0,
+        "indice_seguridad_alerta": 45.0,
+        "dias_alerta_plazo": 30
+    },
+    "rag_keywords": [
+        "canal",
+        "captacion",
+        "azud",
+        "toma de agua",
+        "tuberia",
+        "conduccion",
+        "fundicion ductil",
+        "PEAD",
+        "PE100",
+        "PRFV",
+        "acero al carbono",
+        "zanja",
+        "entibacion",
+        "cama de arena",
+        "arqueta",
+        "ventosa",
+        "desague",
+        "valvula de compuerta",
+        "valvula de mariposa",
+        "calderin antiariete",
+        "estacion de bombeo",
+        "sifon",
+        "almenara",
+        "prueba de presion",
+        "UNE-EN 805",
+        "UNE-EN 1610",
+        "perfil longitudinal",
+        "rasante"
+    ],
+    "intent_keywords": {
+        "obra_lineal": [
+            "zanja",
+            "entibacion",
+            "cama",
+            "relleno",
+            "rasante",
+            "perfil longitudinal",
+            "pk",
+            "tramo",
+            "reposicion servicios"
+        ],
+        "conducciones": [
+            "tuberia",
+            "fundicion ductil",
+            "pead",
+            "prfv",
+            "canal",
+            "revestimiento",
+            "junta elastica",
+            "diametro nominal",
+            "pn10",
+            "pn16"
+        ],
+        "valvuleria_y_bombeo": [
+            "ventosa",
+            "desague",
+            "valvula",
+            "arqueta",
+            "bombeo",
+            "antiariete",
+            "caudalimetro",
+            "carrete desmontaje"
+        ],
+        "normativa": [
+            "UNE-EN 805",
+            "UNE-EN 1610",
+            "RD 3/2023",
+            "Codigo Estructural",
+            "PG-3",
+            "DPH"
+        ],
+        "evm_hitos": [
+            "replanteo y servicios",
+            "excavacion zanja",
+            "obra civil captacion",
+            "tendido tuberia",
+            "pruebas presion",
+            "puesta en servicio"
+        ]
+    },
+    "system_prompt_extension": "Eres especialista en obras hidráulicas lineales: captaciones fluviales y de embalse, canales a lámina libre y conducciones a presión/gravedad. Dominas las normas UNE-EN 805 (abastecimiento), UNE-EN 1610 (saneamiento y zanjas), el Código Estructural (RD 470/2021), el RD 3/2023 y el PG-3. Conoces los materiales de tubería (fundición dúctil K9/C40, PEAD PE100, PRFV, acero helicoidal y hormigón con camisa de chapa), la problemática de reposición de servicios afectados, entibaciones en zanjas profundas con nivel freático, macizos de anclaje, válvulas de seccionamiento, ventosas trifuncionales, desagües y calderines antiariete. El control de avance se mide por tramos/P.K. (excavación, cama, tendido, prueba hidráulica y relleno).",
+    "normativas": [
+        "UNE-EN 805 (Abastecimiento de agua)",
+        "UNE-EN 1610 (Instalación y prueba de zanjas)",
+        "RD 3/2023 (Calidad agua consumo)",
+        "Código Estructural (RD 470/2021)",
+        "PG-3 (Pliego General Carreteras)",
+        "Texto Refundido Ley de Aguas / DPH"
+    ],
+    "certificaciones": [
+        "Protocolo Prueba Hidráulica UNE-EN 805",
+        "Certificado Estanqueidad Canal / Cámaras",
+        "Desinfección y Análisis Microbiológico",
+        "ISO 9001 / ISO 45001"
+    ],
+    "budget_chapters": [
+        {"codigo": "01", "nombre": "Trabajos previos y reposición de servicios", "ratio": 0.06},
+        {"codigo": "02", "nombre": "Movimiento de tierras, zanjas y entibaciones", "ratio": 0.20},
+        {"codigo": "03", "nombre": "Cama de apoyo, rellenos y compactación", "ratio": 0.08},
+        {"codigo": "04", "nombre": "Obra civil de captación, cámaras y arquetas", "ratio": 0.16},
+        {"codigo": "05", "nombre": "Suministro y montaje de tuberías / canal", "ratio": 0.28},
+        {"codigo": "06", "nombre": "Valvulería, piezas especiales y calderería", "ratio": 0.09},
+        {"codigo": "07", "nombre": "Estaciones de bombeo y protección antiariete", "ratio": 0.06},
+        {"codigo": "08", "nombre": "Telecontrol, SCADA y acometida eléctrica", "ratio": 0.03},
+        {"codigo": "09", "nombre": "Pruebas hidráulicas, limpieza y desinfección", "ratio": 0.02},
+        {"codigo": "10", "nombre": "Seguridad, salud y control de calidad", "ratio": 0.02}
+    ],
+    "evm_phases": [
+        "Replanteo, expropiaciones y servicios afectados",
+        "Movimiento de tierras y entibación de zanjas",
+        "Obra civil de captación y cámaras de carga",
+        "Tendido de tuberías / hormigonado de canal",
+        "Valvulería, arquetas y estaciones de bombeo",
+        "Relleno, compactación y reposición de firmes",
+        "Pruebas hidráulicas, desinfección y puesta en servicio"
+    ]
+}

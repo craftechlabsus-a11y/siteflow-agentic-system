@@ -1,0 +1,176 @@
+{
+    "module_id": "depuradoras_edar",
+    "name": "Depuradoras de Agua Servida (EDAR)",
+    "name_short": "EDAR",
+    "icon": "♻️",
+    "description": "Estaciones Depuradoras de Aguas Residuales (WWTP): fangos activos, BNR, MBR, línea de fangos con digestión anaerobia/biogás y tratamiento terciario para reutilización.",
+    "color_primary": "#0d9488",
+    "color_secondary": "#134e4a",
+    "unit_main": "hab-eq",
+    "unit_secondary": "m³/día",
+    "cost_range_min": 180,
+    "cost_range_max": 650,
+    "cost_ratios": {
+        "urbanizacion_y_cimentaciones": 0.10,
+        "obra_civil_linea_agua": 0.28,
+        "obra_civil_linea_fangos_y_edificios": 0.14,
+        "equipos_linea_agua": 0.18,
+        "equipos_fangos_biogas_desodorizacion": 0.10,
+        "tuberias_proceso_y_valvuleria": 0.08,
+        "electricidad_at_bt_y_scada": 0.07,
+        "pruebas_estanqueidad_y_arranque_biologico": 0.03,
+        "seguridad_salud_y_calidad": 0.02
+    },
+    "kpi_names": [
+        "CPI",
+        "SPI",
+        "Ratio CAPEX",
+        "Pruebas Estanqueidad",
+        "Índice Seguridad",
+        "EAC"
+    ],
+    "kpi_descriptions": {
+        "CPI": "Índice de Desempeño de Coste",
+        "SPI": "Índice de Desempeño de Plazo",
+        "Ratio CAPEX": "Inversión unitaria por habitante equivalente (€/hab-eq)",
+        "Pruebas Estanqueidad": "Porcentaje de recintos estancos (reactores/decantadores) probados OK",
+        "Índice Seguridad": "Accidentes con baja / millón horas trabajadas (espacios confinados y ATEX)",
+        "EAC": "Estimación a la Conclusión del proyecto (€)"
+    },
+    "kpi_units": {
+        "CPI": "ratio",
+        "SPI": "ratio",
+        "Ratio CAPEX": "€/hab-eq",
+        "Pruebas Estanqueidad": "%",
+        "Índice Seguridad": "accidentes/Mh",
+        "EAC": "€"
+    },
+    "alert_thresholds": {
+        "cpi_critico": 0.85,
+        "cpi_alto": 0.93,
+        "spi_critico": 0.82,
+        "spi_alto": 0.90,
+        "tcpi_alto": 1.07,
+        "desviacion_critica": 15.0,
+        "desviacion_alta": 8.0,
+        "avance_bajo": 15.0,
+        "indice_seguridad_alerta": 40.0,
+        "dias_alerta_plazo": 30
+    },
+    "rag_keywords": [
+        "EDAR",
+        "depuradora",
+        "aguas residuales",
+        "pretratamiento",
+        "desbaste",
+        "desarenador",
+        "reactor biologico",
+        "fangos activos",
+        "MBR",
+        "decantador secundario",
+        "puente rascador",
+        "espesador",
+        "digestor anaerobio",
+        "biogas",
+        "cogeneracion",
+        "centrifuga",
+        "deshidratacion",
+        "desodorizacion",
+        "soplante",
+        "difusor",
+        "estanqueidad",
+        "hormigon estanco",
+        "ACI 350",
+        "EN 12255",
+        "AISI 316",
+        "ATEX",
+        "arranque biologico",
+        "habitantes equivalentes"
+    ],
+    "intent_keywords": {
+        "obra_civil_hidraulica": [
+            "reactor",
+            "decantador",
+            "digestor",
+            "balsa",
+            "arqueta",
+            "hormigon estanco",
+            "junta waterstop",
+            "estanqueidad",
+            "aci 350"
+        ],
+        "equipos_proceso": [
+            "tamiz",
+            "reja",
+            "desarenador",
+            "puente rascador",
+            "soplante",
+            "difusor",
+            "agitador",
+            "centrifuga",
+            "filtro banda",
+            "membrana mbr"
+        ],
+        "energia_y_control": [
+            "ccm",
+            "scada",
+            "transformador",
+            "biogas",
+            "atex",
+            "caudalimetro",
+            "sonda oxigeno",
+            "redox"
+        ],
+        "normativa": [
+            "91/271/CEE",
+            "RD 509/1996",
+            "RD 1620/2007",
+            "EN 12255",
+            "ACI 350",
+            "ATEX",
+            "REBT"
+        ],
+        "evm_hitos": [
+            "cimentaciones y pilotes",
+            "obra civil estanca",
+            "montaje electromecanico",
+            "pruebas estanqueidad",
+            "arranque biologico"
+        ]
+    },
+    "system_prompt_extension": "Eres especialista en Estaciones Depuradoras de Aguas Residuales (EDAR / WWTP). Dominas la Directiva 91/271/CEE, RD 509/1996, RD 1620/2007 de reutilización, la norma EN 12255, el estándar ACI 350 para hormigón estanco, el Código Estructural (ambiente XA2/XA3) y la normativa ATEX para zonas de biogás y pretratamiento. Conoces la división en Línea de Agua (pretratamiento, decantación primaria, reactor biológico BNR/MBR, decantación secundaria, terciario) y Línea de Fangos (espesamiento, digestión anaerobia, gasómetro, deshidratación centrífuga, desodorización). Sabes que el hormigón estanco requiere juntas waterstop y pruebas de estanqueidad previas al montaje electromecánico, y que la puesta en marcha incluye un arranque biológico de 30 a 90 días con garantías de vertido (DBO5, DQO, SS, Ntotal, Ptotal).",
+    "normativas": [
+        "Directiva 91/271/CEE (Aguas Residuales)",
+        "RD 509/1996 (Normas tratamiento)",
+        "RD 1620/2007 (Reutilización aguas depuradas)",
+        "EN 12255 / ACI 350 (Estructuras estancas)",
+        "Código Estructural (RD 470/2021)",
+        "ATEX 2014/34/UE & REBT"
+    ],
+    "certificaciones": [
+        "Pruebas de Estanqueidad de Recintos (EN 12255)",
+        "Certificación ATEX Línea de Fangos/Biogás",
+        "Ensayos de Garantía de Vertido (DBO5/DQO/N/P)",
+        "ISO 9001 / ISO 14001"
+    ],
+    "budget_chapters": [
+        {"codigo": "01", "nombre": "Urbanización, movimiento de tierras y cimentaciones", "ratio": 0.10},
+        {"codigo": "02", "nombre": "Obra civil línea de agua (reactores, decantadores)", "ratio": 0.28},
+        {"codigo": "03", "nombre": "Obra civil línea de fangos y edificios", "ratio": 0.14},
+        {"codigo": "04", "nombre": "Equipos electromecánicos línea de agua", "ratio": 0.18},
+        {"codigo": "05", "nombre": "Equipos línea de fangos, biogás y desodorización", "ratio": 0.10},
+        {"codigo": "06", "nombre": "Tuberías de proceso, valvulería y calderería", "ratio": 0.08},
+        {"codigo": "07", "nombre": "Electricidad AT/BT, CCM, SCADA e instrumentación", "ratio": 0.07},
+        {"codigo": "08", "nombre": "Pruebas de estanqueidad y arranque biológico", "ratio": 0.03},
+        {"codigo": "09", "nombre": "Seguridad, salud y control de calidad", "ratio": 0.02}
+    ],
+    "evm_phases": [
+        "Movimiento de tierras y cimentaciones especiales",
+        "Obra civil estanca línea de agua y fangos",
+        "Pruebas hidráulicas de estanqueidad de recintos",
+        "Montaje de equipos electromecánicos y tuberías",
+        "Instalación eléctrica AT/BT, CCM y SCADA",
+        "Pruebas en vacío y puesta en carga hidráulica",
+        "Arranque biológico y pruebas de garantía de vertido"
+    ]
+}

@@ -1,0 +1,201 @@
+{
+    "module_id": "puentes",
+    "name": "Puentes e Infraestructuras Viales",
+    "name_short": "Puentes",
+    "icon": "🌉",
+    "description": "Puentes de carretera y ferrocarril, viaductos, pasos superiores e inferiores. Estimación paramétrica por ml de tablero y tipología estructural (vigas pretensadas, arco, atirantado, losa).",
+    "color_primary": "#d97706",
+    "color_secondary": "#78350f",
+    "unit_main": "ml tablero",
+    "unit_secondary": "m²  alzado",
+    "cost_range_min": 15000,
+    "cost_range_max": 120000,
+    "cost_ratios": {
+        "trabajos_previos_replanteo": 0.02,
+        "cimentaciones_especiales": 0.18,
+        "pilas_y_estribos": 0.20,
+        "tablero_superestructura": 0.35,
+        "apoyos_y_juntas": 0.04,
+        "impermeabilizacion_y_pavimento": 0.05,
+        "barreras_y_seguridad_vial": 0.06,
+        "iluminacion_y_drenaje": 0.04,
+        "acondicionamiento_accesos": 0.04,
+        "seguridad_salud": 0.015,
+        "control_calidad": 0.005,
+        "imprevistos": 0.02
+    },
+    "kpi_names": [
+        "CPI",
+        "SPI",
+        "Avance hitos",
+        "Índice Seguridad",
+        "PPI",
+        "EAC"
+    ],
+    "kpi_descriptions": {
+        "CPI": "Índice de Desempeño de Coste",
+        "SPI": "Índice de Desempeño de Plazo",
+        "Avance hitos": "% completado por fase estructural (cimentación, pilas, tablero, accesos)",
+        "Índice Seguridad": "Accidentes con baja / millón horas trabajadas (objetivo <25)",
+        "PPI": "Índice de Avance del Proyecto (progreso físico vs planificado)"
+    },
+    "kpi_units": {
+        "CPI": "ratio",
+        "SPI": "ratio",
+        "Avance hitos": "%",
+        "Índice Seguridad": "accidentes/Mh",
+        "PPI": "ratio",
+        "EAC": "€"
+    },
+    "alert_thresholds": {
+        "cpi_critico": 0.82,
+        "cpi_alto": 0.92,
+        "spi_critico": 0.80,
+        "spi_alto": 0.88,
+        "tcpi_alto": 1.08,
+        "desviacion_critica": 18.0,
+        "desviacion_alta": 9.0,
+        "avance_bajo": 15.0,
+        "indice_seguridad_alerta": 50.0,
+        "dias_alerta_plazo": 45
+    },
+    "rag_keywords": [
+        "puente",
+        "viaducto",
+        "paso superior",
+        "paso inferior",
+        "tablero",
+        "pila",
+        "estribo",
+        "cimentacion por pilotes",
+        "losa de cimentacion",
+        "cimentacion directa",
+        "vigas pretensadas",
+        "dovelas",
+        "arco",
+        "puente atirantado",
+        "aparatos de apoyo",
+        "junta de dilatacion",
+        "hormigon pretensado",
+        "HP-45",
+        "HP-50",
+        "IAP-11",
+        "EHE-08",
+        "andamiaje cimbra",
+        "autocimbra",
+        "zapatas",
+        "encepados"
+    ],
+    "intent_keywords": {
+        "cimentacion": [
+            "pilotes",
+            "zapatas",
+            "encepados",
+            "pantallas",
+            "micropilotes",
+            "cimentacion especial"
+        ],
+        "superestructura": [
+            "tablero",
+            "vigas",
+            "losa",
+            "pretensado",
+            "dovelas",
+            "atirantes",
+            "arco"
+        ],
+        "seguridad_vial": [
+            "barrera",
+            "bionda",
+            "pretil",
+            "balizamiento",
+            "senalizacion vial"
+        ],
+        "normativa": [
+            "IAP-11",
+            "EHE-08",
+            "Eurocodigo 2",
+            "PG-3",
+            "instruccion de carreteras"
+        ],
+        "evm_hitos": [
+            "cimentacion completada",
+            "pilas terminadas",
+            "tablero hormigonado",
+            "pavimentacion",
+            "puesta en servicio"
+        ]
+    },
+    "system_prompt_extension": "Eres especialista en puentes e infraestructuras viales y ferroviarias. Dominas la Instrucción de Acciones en Puentes de Carretera (IAP-11), la EHE-08 (Instrucción del Hormigón Estructural), el Eurocódigo 2 y el PG-3 (Pliego de Prescripciones Técnicas Generales para obras de carretera). Conoces las tipologías estructurales: puentes de vigas prefabricadas pretensadas (más económicos, 15.000-30.000 €/ml), puentes de losa de hormigón (25.000-45.000 €/ml), viaductos de pila alta (40.000-80.000 €/ml) y puentes atirantados o en arco (60.000-120.000+ €/ml). En el seguimiento de la ejecución por EVM, los hitos son: cimentaciones, pilas/estribos, tablero, pavimentación y accesos. El Índice de Seguridad (accidentes con baja por millón de horas) es un KPI crítico en este sector por la alta peligrosidad de los trabajos en altura y sobre vías en servicio. El control de calidad se realiza por lotes de inspección con registros documentales (OM-1972).",
+    "normativas": [
+        "IAP-11",
+        "EHE-08",
+        "Eurocódigo 2 (EC-2)",
+        "PG-3",
+        "OM-1972 (Control calidad)",
+        "Instrucción de Carreteras",
+        "Nota de Servicio 5/2014"
+    ],
+    "certificaciones": [
+        "ISO 9001 (Control calidad en obra)",
+        "OHSAS 18001 / ISO 45001 (Seguridad)",
+        "CEDEX Ensayos"
+    ],
+    "budget_chapters": [
+        {
+            "codigo": "01",
+            "nombre": "Trabajos previos y replanteo",
+            "ratio": 0.02
+        },
+        {
+            "codigo": "02",
+            "nombre": "Cimentaciones especiales",
+            "ratio": 0.18
+        },
+        {
+            "codigo": "03",
+            "nombre": "Pilas y estribos",
+            "ratio": 0.20
+        },
+        {
+            "codigo": "04",
+            "nombre": "Tablero y superestructura",
+            "ratio": 0.35
+        },
+        {
+            "codigo": "05",
+            "nombre": "Apoyos y juntas de dilatación",
+            "ratio": 0.04
+        },
+        {
+            "codigo": "06",
+            "nombre": "Impermeabilización y pavimento",
+            "ratio": 0.05
+        },
+        {
+            "codigo": "07",
+            "nombre": "Barreras de seguridad vial",
+            "ratio": 0.06
+        },
+        {
+            "codigo": "08",
+            "nombre": "Iluminación y drenaje",
+            "ratio": 0.04
+        },
+        {
+            "codigo": "09",
+            "nombre": "Acondicionamiento de accesos",
+            "ratio": 0.04
+        }
+    ],
+    "evm_phases": [
+        "Trabajos previos y replanteo",
+        "Cimentaciones (pilotes / zapatas)",
+        "Pilas y estribos",
+        "Tablero y superestructura",
+        "Apoyos, juntas e impermeabilización",
+        "Pavimentación y señalización",
+        "Barreras, drenaje e iluminación",
+        "Acondicionamiento de accesos y puesta en servicio"
+    ]
+}

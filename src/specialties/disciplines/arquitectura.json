@@ -1,0 +1,8 @@
+{
+  "discipline": "arquitectura",
+  "name": "Arquitectura, Envolvente y Urbanización",
+  "ifc_classes": ["IfcWall", "IfcRoof", "IfcStair", "IfcCovering", "IfcDoor", "IfcWindow", "IfcCurtainWall"],
+  "normativas": ["CTE DB-HE", "CTE DB-SI", "CTE DB-SUA", "CTE DB-HS"],
+  "unidades_clave": ["m2", "ud", "ml"],
+  "checks_obligatorios": ["sectorizacion_incendios", "accesibilidad", "impermeabilizacion"]
+}

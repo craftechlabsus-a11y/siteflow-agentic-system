@@ -1,0 +1,8 @@
+{
+  "discipline": "estructuras",
+  "name": "Estructuras y Cimentaciones",
+  "ifc_classes": ["IfcFooting", "IfcPile", "IfcColumn", "IfcBeam", "IfcSlab", "IfcWall", "IfcBridge", "IfcReinforcingBar", "IfcTendon"],
+  "normativas": ["Código Estructural (RD 470/2021)", "Eurocódigo 2 (EN 1992)", "Eurocódigo 3 (EN 1993)", "NCSR-02"],
+  "unidades_clave": ["m3", "kg", "m2", "ml"],
+  "checks_obligatorios": ["recubrimiento_armadura", "clase_exposicion_xc_xs", "resistencia_ha"]
+}

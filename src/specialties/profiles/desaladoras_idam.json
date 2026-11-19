@@ -1,0 +1,172 @@
+{
+    "module_id": "desaladoras_idam",
+    "name": "Desaladoras de Agua Marina (IDAM)",
+    "name_short": "Desaladora",
+    "icon": "💧",
+    "description": "Plantas Desaladoras de Agua de Mar por Ósmosis Inversa (SWRO): captación marina, pretratamiento DAF/UF, bastidores RO con recuperadores de energía ERD, remineralización y emisario de salmuera.",
+    "color_primary": "#0891b2",
+    "color_secondary": "#164e63",
+    "unit_main": "m³/día",
+    "unit_secondary": "kWh/m³",
+    "cost_range_min": 1100,
+    "cost_range_max": 2600,
+    "cost_ratios": {
+        "captacion_marina_y_emisario": 0.14,
+        "obra_civil_naves_y_depositos": 0.16,
+        "pretratamiento_daf_y_uf": 0.12,
+        "sistema_osmosis_inversa_y_erd": 0.24,
+        "tuberias_super_duplex_y_prfv": 0.11,
+        "postratamiento_y_remineralizacion": 0.05,
+        "electricidad_at_mt_scada": 0.11,
+        "pruebas_rendimiento_y_garantias": 0.04,
+        "seguridad_salud_y_vigilancia_marina": 0.03
+    },
+    "kpi_names": [
+        "CPI",
+        "SPI",
+        "SEC (kWh/m³)",
+        "Conversión RO",
+        "Calidad TDS",
+        "EAC"
+    ],
+    "kpi_descriptions": {
+        "CPI": "Índice de Desempeño de Coste",
+        "SPI": "Índice de Desempeño de Plazo",
+        "SEC (kWh/m³)": "Consumo Específico Energético en ósmosis inversa / planta (objetivo 2.8–3.5 kWh/m³)",
+        "Conversión RO": "Tasa de conversión de agua producto frente a agua bruta (%)",
+        "Calidad TDS": "Sólidos Disueltos Totales en agua producto (ppm / mg/l)",
+        "EAC": "Estimación a la Conclusión del proyecto (€)"
+    },
+    "kpi_units": {
+        "CPI": "ratio",
+        "SPI": "ratio",
+        "SEC (kWh/m³)": "kWh/m³",
+        "Conversión RO": "%",
+        "Calidad TDS": "ppm",
+        "EAC": "€"
+    },
+    "alert_thresholds": {
+        "cpi_critico": 0.86,
+        "cpi_alto": 0.94,
+        "spi_critico": 0.84,
+        "spi_alto": 0.91,
+        "tcpi_alto": 1.06,
+        "desviacion_critica": 14.0,
+        "desviacion_alta": 7.0,
+        "avance_bajo": 15.0,
+        "sec_max_alerta": 3.6,
+        "dias_alerta_plazo": 30
+    },
+    "rag_keywords": [
+        "IDAM",
+        "desaladora",
+        "SWRO",
+        "osmosis inversa",
+        "bastidor RO",
+        "tubo de presion",
+        "membrana SWRO",
+        "recuperador de energia",
+        "ERD",
+        "intercambiador isobarico",
+        "bomba alta presion",
+        "Super Duplex",
+        "UNS S32750",
+        "PRFV",
+        "pretratamiento",
+        "DAF",
+        "ultrafiltracion",
+        "remineralizacion",
+        "calcita",
+        "emisario submarino",
+        "inmisario",
+        "salmuera",
+        "boro",
+        "TDS",
+        "kWh/m3",
+        "ambiente marino XS3",
+        "VFD"
+    ],
+    "intent_keywords": {
+        "obra_maritima": [
+            "inmisario",
+            "emisario submarino",
+            "salmuera",
+            "difusores",
+            "pozos playeros",
+            "torre de toma",
+            "dragado",
+            "escollera"
+        ],
+        "osmosis_inversa": [
+            "bastidor",
+            "rack",
+            "membrana",
+            "tubo de presion",
+            "erd",
+            "px",
+            "bomba alta presion",
+            "booster",
+            "super duplex",
+            "segundo paso"
+        ],
+        "pre_postratamiento": [
+            "daf",
+            "filtro multimedia",
+            "ultrafiltracion",
+            "dosificacion quimica",
+            "remineralizacion",
+            "calcita",
+            "co2",
+            "hipoclorito"
+        ],
+        "normativa": [
+            "RD 3/2023",
+            "ASME B31.3",
+            "EN 13480",
+            "XS3",
+            "Ley de Costas",
+            "EIA marina"
+        ],
+        "evm_hitos": [
+            "obra maritima",
+            "obra civil naves",
+            "suministro equipos largos",
+            "montaje ro y super duplex",
+            "pruebas garantia 72h"
+        ]
+    },
+    "system_prompt_extension": "Eres especialista en Plantas Desaladoras de Agua de Mar por Ósmosis Inversa (IDAM / SWRO). Dominas el RD 3/2023 (incluyendo límites de Boro y remineralización), el Código Estructural en ambiente marino agresivo (XS3), las normas ASME B31.3 / EN 13480 para tuberías de alta presión en acero Super Duplex (UNS S32750/S32760) y la Ley de Costas / vigilancia ambiental de vertido de salmuera. Conoces la cadena completa: captación (inmisario o pozos), pretratamiento (DAF, filtros de arena/antracita o ultrafiltración UF), bastidores RO con recuperadores isobáricos de energía (ERD/PX) y bombas de alta presión, postratamiento (calcita/CO2) y emisario submarino. El KPI estrella es el Consumo Específico Energético (SEC en kWh/m³) y el cronograma está fuertemente condicionado por la fabricación de equipos largos (bombas AP, ERD, membranas) y el test de garantías de 72h–30d.",
+    "normativas": [
+        "RD 3/2023 (Agua consumo humano y Boro)",
+        "Código Estructural Ambiente Marino (XS3)",
+        "ASME B31.3 / EN 13480 (Tubería Alta Presión)",
+        "Ley de Costas y EIA Marina (Salmuera)",
+        "REBT / RAT (Subestación y VFD)"
+    ],
+    "certificaciones": [
+        "Test de Garantías de Proceso (72h/30d: SEC, TDS, Boro)",
+        "Radiografiado/END Soldaduras Super Duplex",
+        "Vigilancia Ambiental Pluma Salmuera",
+        "ISO 9001 / ISO 50001 (Eficiencia Energética)"
+    ],
+    "budget_chapters": [
+        {"codigo": "01", "nombre": "Captación marina y emisario submarino de salmuera", "ratio": 0.14},
+        {"codigo": "02", "nombre": "Obra civil de naves de proceso y depósitos", "ratio": 0.16},
+        {"codigo": "03", "nombre": "Pretratamiento (DAF, filtración / UF, químicos)", "ratio": 0.12},
+        {"codigo": "04", "nombre": "Sistema de Ósmosis Inversa (bastidores, bombas AP, ERD)", "ratio": 0.24},
+        {"codigo": "05", "nombre": "Tuberías de alta presión Super Duplex y PRFV/PEAD", "ratio": 0.11},
+        {"codigo": "06", "nombre": "Postratamiento, remineralización y desinfección", "ratio": 0.05},
+        {"codigo": "07", "nombre": "Instalación eléctrica AT/MT/BT, VFD y SCADA", "ratio": 0.11},
+        {"codigo": "08", "nombre": "Pruebas de rendimiento, garantías y puesta en marcha", "ratio": 0.04},
+        {"codigo": "09", "nombre": "Seguridad, calidad y vigilancia ambiental marina", "ratio": 0.03}
+    ],
+    "evm_phases": [
+        "Obra marítima: captación e emisario submarino",
+        "Obra civil: naves de proceso y depósitos",
+        "Fabricación y recepción de equipos largos (AP, ERD, UF)",
+        "Montaje mecánico de bastidores RO y tuberías Super Duplex",
+        "Instalación eléctrica MT/BT, subestación, VFD y SCADA",
+        "Flushing, pruebas hidrostáticas y puesta en marcha",
+        "Test de garantías (SEC kWh/m³, TDS, Boro) y entrega"
+    ]
+}

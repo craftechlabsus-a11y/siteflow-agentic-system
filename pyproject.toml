@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "siteflow-agentic-system"
+version = "0.1.0"
+description = "Sistema agéntico BIM / Ingeniería Multi-Especialidad conectado vía MCP y Skills con Antigravity IDE y Claude."
+readme = "docs/PLAN_MAESTRO_ARQUITECTURA.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ifcopenshell",
+    "ezdxf",
+    "pymupdf",
+    "duckdb",
+    "networkx",
+    "mcp",
+    "pydantic>=2.0",
+    "openpyxl",
+    "httpx",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "ruff",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:project.version"]
+version_variables = ["src/__init__.py:__version__"]
+tag_format = "v{version}"
+commit_message = "chore(release): v{version} [skip ci]"
+major_on_zero = false
+build_command = "pip install build && python -m build"
+
+[tool.semantic_release.branches.main]
+match = "main"
+prerelease = false
+
+[tool.semantic_release.commit_parser_options]
+allowed_tags = ["build", "chore", "ci", "docs", "feat", "fix", "perf", "refactor", "style", "test"]
+minor_tags = ["feat"]
+patch_tags = ["fix", "perf"]
+
+[tool.semantic_release.changelog]
+changelog_file = "CHANGELOG.md"
+

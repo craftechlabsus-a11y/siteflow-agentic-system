@@ -1,0 +1,8 @@
+{
+  "discipline": "obra_lineal",
+  "name": "Obra Lineal, Canales, Conducciones y Carreteras",
+  "ifc_classes": ["IfcAlignment", "IfcRoad", "IfcRailway", "IfcCourse", "IfcPavement", "IfcFacilityPart"],
+  "normativas": ["Instrucción 3.1-IC Trazado", "PG-3", "UNE-EN 13242"],
+  "unidades_clave": ["ml", "m3", "m2", "t"],
+  "checks_obligatorios": ["pendiente_minima_autolimpieza", "cota_rasante_terreno", "cruzamientos_servicios"]
+}

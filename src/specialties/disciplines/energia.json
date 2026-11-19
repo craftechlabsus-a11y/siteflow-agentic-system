@@ -1,0 +1,8 @@
+{
+  "discipline": "energia",
+  "name": "Energía, Alta/Baja Tensión, Control e Instrumentación",
+  "ifc_classes": ["IfcElectricDistributionBoard", "IfcCableCarrierSegment", "IfcCableSegment", "IfcLightFixture", "IfcOutlet"],
+  "normativas": ["REBT (RD 842/2002)", "RAT (RD 337/2014)", "UNE-EN 61439"],
+  "unidades_clave": ["ml", "ud", "kVA", "kW"],
+  "checks_obligatorios": ["selectividad_protecciones", "caida_tension", "puesta_a_tierra", "scada_io"]
+}

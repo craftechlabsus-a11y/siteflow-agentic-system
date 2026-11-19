@@ -1,0 +1,187 @@
+{
+    "module_id": "edificacion",
+    "name": "Edificación Residencial y Terciaria",
+    "name_short": "Edificación",
+    "icon": "🏗️",
+    "description": "Proyectos de edificación residencial, oficinas, comercial y uso mixto. Estimación por m² construido con ratios de capítulos CYPE/Presto.",
+    "color_primary": "#2563eb",
+    "color_secondary": "#1e3a8a",
+    "unit_main": "m²",
+    "unit_secondary": "planta",
+    "cost_range_min": 700,
+    "cost_range_max": 2500,
+    "cost_ratios": {
+        "movimiento_tierras": 0.03,
+        "cimentacion": 0.07,
+        "estructura": 0.18,
+        "cubierta": 0.06,
+        "cerramientos": 0.10,
+        "particiones": 0.07,
+        "revestimientos": 0.08,
+        "instalacion_electrica": 0.07,
+        "instalacion_fontaneria": 0.05,
+        "instalacion_hvac": 0.08,
+        "carpinteria": 0.08,
+        "urbanizacion": 0.04,
+        "seguridad_salud": 0.02,
+        "control_calidad": 0.01,
+        "gestion_residuos": 0.01,
+        "varios_imprevistos": 0.05
+    },
+    "kpi_names": [
+        "CPI",
+        "SPI",
+        "Avance %",
+        "Desviación €",
+        "EAC",
+        "VAC"
+    ],
+    "kpi_descriptions": {
+        "CPI": "Índice de Desempeño de Coste (EV/AC)",
+        "SPI": "Índice de Desempeño de Plazo (EV/PV)",
+        "Avance %": "Porcentaje de obra ejecutada",
+        "EAC": "Estimación a la Conclusión del proyecto"
+    },
+    "kpi_units": {
+        "CPI": "ratio",
+        "SPI": "ratio",
+        "Avance %": "%",
+        "EAC": "€"
+    },
+    "alert_thresholds": {
+        "cpi_critico": 0.80,
+        "cpi_alto": 0.90,
+        "spi_critico": 0.80,
+        "spi_alto": 0.90,
+        "tcpi_alto": 1.10,
+        "desviacion_critica": 20.0,
+        "desviacion_alta": 10.0,
+        "avance_bajo": 15.0,
+        "dias_alerta_plazo": 30
+    },
+    "rag_keywords": [
+        "edificacion",
+        "vivienda",
+        "residencial",
+        "oficinas",
+        "m2 construido",
+        "escalera",
+        "ascensor",
+        "forjado",
+        "losa",
+        "muros de carga",
+        "tabiqueria",
+        "solado",
+        "alicatado"
+    ],
+    "intent_keywords": {
+        "estructura": [
+            "forjado",
+            "pilares",
+            "muros",
+            "losa",
+            "viga"
+        ],
+        "instalaciones": [
+            "electrica",
+            "fontaneria",
+            "hvac",
+            "climatizacion",
+            "saneamiento"
+        ],
+        "acabados": [
+            "revestimiento",
+            "solado",
+            "alicatado",
+            "pintura",
+            "falso techo"
+        ]
+    },
+    "system_prompt_extension": "Eres especialista en edificación residencial y terciaria. Dominas los sistemas constructivos RC (Residencial Colectivo) y RC (Residencial Unifamiliar), los ratios de coste por m² CYPE y las normativas CTE-DB-SI, CTE-DB-SUA, CTE-DB-HR y CTE-DB-HE. Conoces perfectamente el sistema de medición Presto y los rendimientos de mano de obra BCO. Cuando el usuario pregunte sobre costes de edificación, proporciona rangos parametrizados por calidad (básica, estándar, alta, premium) y tipo (residencial, oficinas, comercial).",
+    "normativas": [
+        "CTE DB-SI",
+        "CTE DB-SUA",
+        "CTE DB-HE",
+        "CTE DB-HR",
+        "EHE-08",
+        "REBT",
+        "RITE"
+    ],
+    "certificaciones": [
+        "BREEAM",
+        "LEED",
+        "PassivHaus",
+        "VERDE"
+    ],
+    "budget_chapters": [
+        {
+            "codigo": "01",
+            "nombre": "Demoliciones y acondicionamiento",
+            "ratio": 0.03
+        },
+        {
+            "codigo": "02",
+            "nombre": "Cimentaciones",
+            "ratio": 0.07
+        },
+        {
+            "codigo": "03",
+            "nombre": "Estructuras",
+            "ratio": 0.18
+        },
+        {
+            "codigo": "04",
+            "nombre": "Cubierta y azotea",
+            "ratio": 0.06
+        },
+        {
+            "codigo": "05",
+            "nombre": "Cerramientos exteriores",
+            "ratio": 0.10
+        },
+        {
+            "codigo": "06",
+            "nombre": "Particiones interiores",
+            "ratio": 0.07
+        },
+        {
+            "codigo": "07",
+            "nombre": "Revestimientos y acabados",
+            "ratio": 0.08
+        },
+        {
+            "codigo": "08",
+            "nombre": "Instalación eléctrica",
+            "ratio": 0.07
+        },
+        {
+            "codigo": "09",
+            "nombre": "Instalación de fontanería",
+            "ratio": 0.05
+        },
+        {
+            "codigo": "10",
+            "nombre": "Instalaciones HVAC",
+            "ratio": 0.08
+        },
+        {
+            "codigo": "11",
+            "nombre": "Carpintería y cerrajería",
+            "ratio": 0.08
+        },
+        {
+            "codigo": "12",
+            "nombre": "Urbanización exterior",
+            "ratio": 0.04
+        }
+    ],
+    "evm_phases": [
+        "Replanteo y movimiento de tierras",
+        "Cimentación",
+        "Estructura",
+        "Cubierta y cerramientos",
+        "Instalaciones",
+        "Acabados",
+        "Urbanización y entrega"
+    ]
+}

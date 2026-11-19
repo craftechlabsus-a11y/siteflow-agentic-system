@@ -1,0 +1,8 @@
+{
+  "discipline": "geotecnia",
+  "name": "Geotecnia y Movimiento de Tierras",
+  "ifc_classes": ["IfcEarthworksCut", "IfcEarthworksFill", "IfcPile", "IfcFooting"],
+  "normativas": ["CTE DB-SE-C", "Eurocódigo 7 (EN 1997)", "PG-3 Art. 320-330"],
+  "unidades_clave": ["m3", "m2", "ml"],
+  "checks_obligatorios": ["nivel_freatico", "talud_excavacion", "compactacion_proctor"]
+}

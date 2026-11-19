@@ -1,0 +1,191 @@
+{
+    "module_id": "naves_industriales",
+    "name": "Naves Industriales y Logísticas",
+    "name_short": "Naves",
+    "icon": "🏭",
+    "description": "Naves de producción, almacenamiento logístico, talleres y plataformas EPC. Estimación por m² útil considerando altura libre, cargas y tipología estructural.",
+    "color_primary": "#16a34a",
+    "color_secondary": "#14532d",
+    "unit_main": "m²",
+    "unit_secondary": "m altura libre",
+    "cost_range_min": 300,
+    "cost_range_max": 800,
+    "cost_ratios": {
+        "movimiento_tierras": 0.04,
+        "cimentacion": 0.10,
+        "estructura_metalica": 0.28,
+        "cubierta_panel_sandwich": 0.10,
+        "cerramientos_fachada": 0.08,
+        "solera_industrial": 0.10,
+        "puertas_seccionales_muelles": 0.05,
+        "instalacion_electrica": 0.08,
+        "instalacion_contra_incendios": 0.05,
+        "instalacion_iluminacion_led": 0.04,
+        "urbanizacion_viales": 0.05,
+        "seguridad_salud": 0.02,
+        "imprevistos": 0.01
+    },
+    "kpi_names": [
+        "CPI",
+        "SPI",
+        "PPC",
+        "Productividad laboral",
+        "Residuos generados",
+        "EAC"
+    ],
+    "kpi_descriptions": {
+        "CPI": "Índice de Desempeño de Coste",
+        "SPI": "Índice de Desempeño de Plazo",
+        "PPC": "Porcentaje de Promesas Cumplidas (Last Planner)",
+        "Productividad laboral": "Valor ganado por hora trabajada"
+    },
+    "kpi_units": {
+        "CPI": "ratio",
+        "SPI": "ratio",
+        "PPC": "%",
+        "Productividad laboral": "€/h",
+        "Residuos generados": "toneladas",
+        "EAC": "€"
+    },
+    "alert_thresholds": {
+        "cpi_critico": 0.80,
+        "cpi_alto": 0.85,
+        "spi_critico": 0.80,
+        "spi_alto": 0.90,
+        "tcpi_alto": 1.10,
+        "desviacion_critica": 15.0,
+        "desviacion_alta": 8.0,
+        "avance_bajo": 20.0,
+        "ppc_minimo": 75.0,
+        "dias_alerta_plazo": 21
+    },
+    "rag_keywords": [
+        "nave industrial",
+        "nave logistica",
+        "EPC",
+        "estructura metalica",
+        "portico",
+        "cubierta sandwich",
+        "solera industrial",
+        "muelle carga",
+        "puerta seccional",
+        "PCI",
+        "rack almacenamiento",
+        "altura libre",
+        "placa alveolar",
+        "nave de produccion",
+        "taller"
+    ],
+    "intent_keywords": {
+        "estructura": [
+            "portico",
+            "correa",
+            "jacia",
+            "perfil metalico",
+            "pilar HEB",
+            "viga IPE"
+        ],
+        "instalaciones": [
+            "PCI",
+            "contra incendios",
+            "bies",
+            "rociadores",
+            "iluminacion led",
+            "industrial"
+        ],
+        "solera": [
+            "solera",
+            "pavimento industrial",
+            "losa",
+            "juntas",
+            "acabado helicóptero"
+        ],
+        "epc": [
+            "engineering procurement construction",
+            "EPC",
+            "contratacion total",
+            "llave en mano"
+        ]
+    },
+    "system_prompt_extension": "Eres especialista en naves industriales y logísticas. Dominas el sistema constructivo EPC (Engineering, Procurement & Construction), los sistemas de estructura metálica (pórticos IPE/HEB, correas Z/C), cubiertas panel sándwich, soleras industriales y sistemas contra incendios (DB-SI industrial). Conoces el RSCIEI (Reglamento de Seguridad Contra Incendios en Establecimientos Industriales). Cuando el usuario pregunte sobre costes de naves, diferencia entre nave de almacenaje (300-450 €/m²), producción (400-600 €/m²) y nave técnica con climatización (600-800 €/m²). El KPI PPC (Porcentaje de Promesas Cumplidas) del sistema Last Planner es clave en el seguimiento semanal de este tipo de proyectos.",
+    "normativas": [
+        "RSCIEI",
+        "CTE DB-SE-AE",
+        "EAE (Instrucción Acero Estructural)",
+        "NTE-EAS",
+        "UNE 23-010",
+        "Reglamento ATEX"
+    ],
+    "certificaciones": [
+        "BREEAM Industrial",
+        "LEED BD+C",
+        "EMAS",
+        "ISO 14001"
+    ],
+    "budget_chapters": [
+        {
+            "codigo": "01",
+            "nombre": "Movimiento de tierras",
+            "ratio": 0.04
+        },
+        {
+            "codigo": "02",
+            "nombre": "Cimentaciones y fosos",
+            "ratio": 0.10
+        },
+        {
+            "codigo": "03",
+            "nombre": "Estructura metálica",
+            "ratio": 0.28
+        },
+        {
+            "codigo": "04",
+            "nombre": "Cubierta panel sándwich",
+            "ratio": 0.10
+        },
+        {
+            "codigo": "05",
+            "nombre": "Cerramientos de fachada",
+            "ratio": 0.08
+        },
+        {
+            "codigo": "06",
+            "nombre": "Solera y pavimento industrial",
+            "ratio": 0.10
+        },
+        {
+            "codigo": "07",
+            "nombre": "Puertas, muelles y accesos",
+            "ratio": 0.05
+        },
+        {
+            "codigo": "08",
+            "nombre": "Instalación eléctrica y fuerza",
+            "ratio": 0.08
+        },
+        {
+            "codigo": "09",
+            "nombre": "Instalación contra incendios",
+            "ratio": 0.05
+        },
+        {
+            "codigo": "10",
+            "nombre": "Iluminación LED industrial",
+            "ratio": 0.04
+        },
+        {
+            "codigo": "11",
+            "nombre": "Viales y urbanización exterior",
+            "ratio": 0.05
+        }
+    ],
+    "evm_phases": [
+        "Movimiento de tierras y saneamiento",
+        "Cimentaciones y losa",
+        "Montaje estructura metálica",
+        "Cubierta y fachadas",
+        "Solera industrial",
+        "Instalaciones",
+        "Urbanización y puesta en marcha"
+    ]
+}
